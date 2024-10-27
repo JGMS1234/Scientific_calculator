@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Calc.css">
+    <script src="Calc.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="mainContainer">
+        <div class="container">
+            <div id="displayContainer">
+                <input id="display" readonly>
+            </div>
+            <div class="buttons">
+                <div id="row0">
+                    <div id="row1">
+                        <button onclick="sqrt()">x<sub>√</sub></button>
+                        <button id="pi">π</button>
+                        <button id="xpowy">x<sup>y</sup></button>
+                        <button id="expo" onclick="toExponential()">EXP</button>
+                        <button id="dropdownBtn">
+                            <span id="ln1"></span>
+                            <span id="ln2"></span>
+                            <span id="ln3"></span>
+                        </button>
+                    </div>
+                </div>
+                <div id="_row" class="dropdownList">
+                    <button id="inv">INV</button>
+                    <button id="sin">sin</button>
+                    <button id="cos">cos</button>
+                    <button id="tan">tan</button>
+                    <button id="factorial">x!</button>
+                    <button id="e">e</button>
+                    <button id="ln">ln</button>
+                    <button id="log">log</button>
+                </div>
+                <div id="_row1" class="dropdownList_">
+                    <button id="inv.inv">INV</button>
+                    <button id="sin.inv">sin <sup>-1</sup></button>
+                    <button id="cos.inv">cos <sup>-1</sup></button>
+                    <button id="tan.inv">tan <sup>-1</sup></button>
+                    <button id="factorial">x!</button>
+                    <button id="e">e</button>
+                    <button id="ln.inv">e <sup>x</sup></button>
+                    <button id="log.inv">10 <sup>x</sup></button>
+                </div>
+                <div id="row2">
+                    <button onclick="clearDisplay()" class="operators">AC</button>
+                    <button id="brack" class="operator">( )</button>
+                    <button id="perc" class="operator" onclick="percent()">%</button>
+                    <button onclick="appendToDisplay(' / ')" class="operator">÷</button>
+                    <button onclick="appendToDisplay('7')">7</button>
+                    <button onclick="appendToDisplay('8')">8</button>
+                    <button onclick="appendToDisplay('9')">9</button>
+                    <button onclick="appendToDisplay(' * ')" class="operator">×</button>
+                    <button onclick="appendToDisplay('4')">4</button>
+                    <button onclick="appendToDisplay('5')">5</button>
+                    <button onclick="appendToDisplay('6')">6</button>
+                    <button onclick="appendToDisplay(' - ')" class="operator">-</button>
+                    <button onclick="appendToDisplay('1')">1</button>
+                    <button onclick="appendToDisplay('2')">2</button>
+                    <button onclick="appendToDisplay('3')">3</button>
+                    <button onclick="appendToDisplay(' + ')" class="operator">+</button>
+                    <button onclick="appendToDisplay('0')">0</button>
+                    <button onclick="appendToDisplay('.')">.</button>
+                    <button onclick="deleteLast()">DEL</button>
+                    <button onclick="calculate()" class="operator">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
